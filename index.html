@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coal Mine Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Coal Mine Fuel & Work Hours Tracker</h1>
+
+        <!-- Input Form -->
+        <label for="fuel">Enter your average fuel consumption (liters per year):</label>
+        <input type="number" id="fuel" placeholder="e.g., 50000" />
+
+        <label for="hours">Enter machine work hours (hours per year):</label>
+        <input type="number" id="hours" placeholder="e.g., 2000" />
+
+        <button onclick="checkConsumption()">Check Consumption</button>
+
+        <!-- Chart Container -->
+        <div id="chart-container" style="display: none;">
+            <canvas id="consumptionChart"></canvas>
+        </div>
+
+        <!-- Tips Section -->
+        <div id="tips" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
+    <script src="app.js"></script> 
+</body>
+</html>
